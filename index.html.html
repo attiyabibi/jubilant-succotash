@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment No. 4 - HTML, CSS and Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 8px;
+        }
+
+        nav {
+            background-color: #2563eb;
+            text-align: center;
+            padding: 14px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .intro {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        .intro h2 {
+            color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        .card h3 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .form-section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        .form-section h2 {
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #bbb;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 130px;
+            resize: vertical;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        button {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 13px 25px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        footer {
+            margin-top: 30px;
+            background-color: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 700px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 10px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HTML PAGE STRUCTURE: HEADER -->
+    <header>
+        <h1>My Web Development Page</h1>
+        <p>Assignment No. 4 - HTML Structure, CSS Styling, Layout & Form</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <section class="intro" id="home">
+            <h2>Welcome to My Web Page</h2>
+            <p>
+                This webpage demonstrates the basic structure of HTML,
+                CSS styling, responsive layout design, and an HTML form.
+                It is created as part of Assignment No. 4.
+            </p>
+        </section>
+
+        <!-- LAYOUT DESIGN -->
+        <section id="services">
+            <div class="cards">
+
+                <div class="card">
+                    <h3>HTML Structure</h3>
+                    <p>
+                        HTML is used to create the structure and content
+                        of a webpage using elements such as headings,
+                        paragraphs, sections, navigation, and forms.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>CSS Styling</h3>
+                    <p>
+                        CSS is used to improve the appearance of a webpage.
+                        It controls colors, fonts, spacing, borders,
+                        backgrounds, and other visual properties.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Layout Design</h3>
+                    <p>
+                        A good layout organizes webpage content into
+                        attractive sections and makes the website easy
+                        to use on both computers and mobile devices.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FORM CREATION -->
+        <section class="form-section" id="contact">
+            <h2>Contact Form</h2>
+
+            <form action="#" method="post">
+
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name"
+                           placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone"
+                           placeholder="Enter your phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <select id="subject" name="subject">
+                        <option value="">Select a subject</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="web-design">Web Design</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message"
+                              placeholder="Write your message here..."></textarea>
+                </div>
+
+                <button type="submit">Submit Form</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 | Assignment No. 4 | Web Development</p>
+    </footer>
+
+</body>
+</html>
